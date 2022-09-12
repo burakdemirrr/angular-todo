@@ -1,0 +1,15 @@
+<h1>Your Tasks</h1>
+
+
+<input type="text" placeholder="Enter Your Task" [(ngModel)]="entered">
+<button (click)="handleAdd()">Add</button>
+
+<div *ngIf="getCard().length>0">
+    <div *ngFor="let item of getCard()">
+        <p>{{item.mission}}</p>
+    </div>
+</div>
+
+<div *ngIf="getCard().length===0">
+    <p>Your Card is Empty</p>
+</div>
