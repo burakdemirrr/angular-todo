@@ -1,15 +1,19 @@
-<h1>Your Tasks</h1>
+<div class="flex items-center justify-center mt-36 w-full bg-yellow-100 flex-col gap-6">
+
+<h1 class="text-3xl">Your Tasks</h1>
 
 
 <input type="text" placeholder="Enter Your Task" [(ngModel)]="entered">
+<input type="number" placeholder="Enter Days Before Finish" [(ngModel)]="days">
 <button (click)="handleAdd()">Add</button>
 
 <div *ngIf="getCard().length>0">
     <div *ngFor="let item of getCard()">
-        <p>{{item.mission}}</p>
+        <app-item [item]="item"></app-item>
     </div>
 </div>
 
 <div *ngIf="getCard().length===0">
     <p>Your Card is Empty</p>
+</div>
 </div>

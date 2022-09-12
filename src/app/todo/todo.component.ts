@@ -11,9 +11,16 @@ export class TodoComponent implements OnInit {
 
   constructor(private TodoService: TodoService) { }
   entered: string = "";
+  days: number = 0;
+
   handleAdd() {
-    this.TodoService.tasks.push({ mission: this.entered,date:new Date(),days:"15", });
-    this.entered=""
+    if(this.days>0){
+      this.TodoService.tasks.push({ mission: this.entered, date: new Date(), days: this.days });
+      this.entered = ""
+      this.days = 0; }
+      else{
+        alert("Please enter days")
+      }
   }
 
   getCard() {

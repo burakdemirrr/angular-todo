@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { TodoComponent } from './todo/todo.component';
 import { TadaComponent } from './tada/tada.component';
 import { FormsModule } from '@angular/forms';
+import { ItemComponent } from './todo/item/item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodoComponent,
-    TadaComponent
+    TadaComponent,
+    ItemComponent
   ],
   imports: [
     BrowserModule,
