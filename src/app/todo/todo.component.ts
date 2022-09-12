@@ -9,7 +9,7 @@ import { Task } from '../types/todo';
 })
 export class TodoComponent implements OnInit {
 
-  constructor(private TodoService: TodoService) { }
+  constructor(private TodoService: TodoService) {}
   entered: string = "";
   days: number = 0;
 
@@ -27,7 +27,7 @@ export class TodoComponent implements OnInit {
     return this.TodoService.tasks;
   }
 
+
   ngOnInit(): void {
   }
-
 }
