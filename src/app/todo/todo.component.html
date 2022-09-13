@@ -5,7 +5,7 @@
 
 <input type="text" placeholder="Enter Your Task" [(ngModel)]="entered">
 <input type="number" placeholder="Enter Days Before Finish" [(ngModel)]="days">
-<button (click)="handleAdd()">Add</button>
+<button class="w-15 h-6 bg-[#1F275E] text-white p-3 rounded-xl flex items-center cursor-pointer "  (click)="handleAdd()">Add</button>
 
 <div *ngIf="getCard().length>0">
     <div *ngFor="let item of getCard()">
